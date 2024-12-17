@@ -21,6 +21,7 @@ kubernetes_state_core.yaml.default: |-
 {{- if .Values.datadog.kubeStateMetricsCore.collectCrdMetrics }}
       - customresourcedefinitions
 {{- end }}
+      - helmreleases.helm.toolkit.fluxcd.io
       - nodes
       - pods
       - services
